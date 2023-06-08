@@ -1,0 +1,17 @@
+mutation UpdateTimezone($stimezone: String!){
+    users {
+        updateProfile(
+            name: ""
+            location: ""
+            jobTitle: ""
+            timezone: $stimezone
+            dateFormat: ""
+            appearance: ""
+        ){
+            responseResult {
+                errorCode
+            }
+            jwt
+        }
+    }
+}

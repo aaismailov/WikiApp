@@ -1,0 +1,13 @@
+query SearchPageQuery($squery: String!) {
+    pages {
+        search(query:$squery) {
+            results {
+                id
+                title
+                description
+                path
+                locale
+            }
+        }
+    }
+}

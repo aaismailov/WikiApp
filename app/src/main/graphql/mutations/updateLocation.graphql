@@ -1,0 +1,17 @@
+mutation UpdateLocation($slocation: String!){
+    users {
+        updateProfile(
+            name: ""
+            location: $slocation
+            jobTitle: ""
+            timezone: ""
+            dateFormat: ""
+            appearance: ""
+        ){
+            responseResult {
+                errorCode
+            }
+            jwt
+        }
+    }
+}

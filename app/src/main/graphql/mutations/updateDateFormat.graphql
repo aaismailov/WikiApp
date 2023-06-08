@@ -1,0 +1,17 @@
+mutation UpdateDateFormat($sdateFormat: String!){
+    users {
+        updateProfile(
+            name: ""
+            location: ""
+            jobTitle: ""
+            timezone: ""
+            dateFormat: $sdateFormat
+            appearance: ""
+        ){
+            responseResult {
+                errorCode
+            }
+            jwt
+        }
+    }
+}

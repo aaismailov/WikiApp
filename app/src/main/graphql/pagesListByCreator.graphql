@@ -1,0 +1,11 @@
+query PagesListByCreatorQuery($sid: Int!) {
+    pages {
+        list (orderBy: TITLE, creatorId: $sid) {
+            id
+            path
+            title
+            createdAt
+            updatedAt
+        }
+    }
+}

@@ -1,0 +1,23 @@
+mutation CommentCreate(
+    $spageId: Int!,
+    $scontent: String!,
+    $sguestName: String,
+    $sguestEmail: String
+) {
+    comments {
+        create(
+            pageId: $spageId,
+            content: $scontent,
+            guestName: $sguestName,
+            guestEmail: $sguestEmail
+        ) {
+            responseResult {
+                succeeded
+                errorCode
+                slug
+                message
+            }
+            id
+        }
+    }
+}

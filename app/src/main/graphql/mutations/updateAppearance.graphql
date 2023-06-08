@@ -1,0 +1,17 @@
+mutation UpdateAppearance($sappearance: String!){
+    users {
+        updateProfile(
+            name: ""
+            location: ""
+            jobTitle: ""
+            timezone: ""
+            dateFormat: ""
+            appearance: $sappearance
+        ){
+            responseResult {
+                errorCode
+            }
+            jwt
+        }
+    }
+}

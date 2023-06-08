@@ -1,0 +1,21 @@
+query PagesTreeQuery($sid: Int!) {
+    pages {
+        tree (
+            parent: $sid,
+            mode: ALL,
+            locale: "ru",
+            includeAncestors: true
+        ) {
+            id
+            path
+            depth
+            title
+            isPrivate
+            isFolder
+            privateNS
+            parent
+            pageId
+            locale
+        }
+    }
+}

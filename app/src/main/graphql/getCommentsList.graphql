@@ -1,0 +1,16 @@
+query CommentsListQuery($spath: String!) {
+    comments {
+        list(
+            locale: "ru",
+            path: $spath
+        ) {
+            id
+            content
+            render
+            authorId
+            authorName
+            createdAt
+            updatedAt
+        }
+    }
+}

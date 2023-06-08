@@ -1,0 +1,17 @@
+mutation UpdateJob($sjob: String!){
+    users {
+        updateProfile(
+            name: ""
+            location: ""
+            jobTitle: $sjob
+            timezone: ""
+            dateFormat: ""
+            appearance: ""
+        ){
+            responseResult {
+                errorCode
+            }
+            jwt
+        }
+    }
+}

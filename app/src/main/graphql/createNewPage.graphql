@@ -1,0 +1,32 @@
+mutation CreateNewPage(
+    $scontent: String!,
+    $sdescription: String!,
+    $seditor: String!,
+    $sisPublished: Boolean!,
+    $sisPrivate: Boolean!,
+    $slocale: String!,
+    $spath: String!,
+    $stags: [String]!,
+    $stitle: String!
+) {
+    pages {
+        create(
+            content: $scontent,
+            description: $sdescription,
+            editor: $seditor,
+            isPublished: $sisPublished,
+            isPrivate: $sisPrivate,
+            locale: $slocale,
+            path: $spath,
+            tags: $stags,
+            title: $stitle
+        ) {
+            responseResult {
+                succeeded
+                errorCode
+                slug
+                message
+            }
+        }
+    }
+}
